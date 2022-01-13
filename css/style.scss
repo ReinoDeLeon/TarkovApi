@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Tarkov';
+    src: url('../fonts/bender.regular.otf');
+}
+
+@font-face {
+    font-family: 'Tarkov Black';
+    src: url('../fonts/bender.black.otf');
+}
+
+h2 {
+    font-size: x-large;
+    font-family: 'Tarkov Black';
+}
+
+header {
+    display: flex;
+    background-color: #311e00;
+    #img {
+        margin: 2% 10%;
+        width: 20%;
+        img {
+            width: 100%;
+        }
+    }
+    #menu {
+        width: 60%;
+        display: block;
+        ul {
+            margin: 5% 0;
+            width: 100%;
+            li {
+                cursor: pointer;
+                display: inline;
+                color: white;
+                h2 {
+                    margin: 0 15px;
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    #response {
+        width: 50%;
+        display: flex;
+        .imagen {
+            width: 10%;
+            margin: 5%;
+        }
+        h3 {
+            width: 80%;
+            margin-top: 8%;
+        }
+    }
+}
