@@ -1,4 +1,4 @@
-function getInfo(shortname, id, type, link) {
+function chargeSimpleInfo(shortname, id, type, link) {
     var ajax1 = new XMLHttpRequest();
     ajax1.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -8,6 +8,7 @@ function getInfo(shortname, id, type, link) {
             let img = document.createElement('img');
             img.setAttribute('src', link);
             img.setAttribute('class', 'imagen');
+            console.log("getting " + type)
             if (type == "gun") {
                 let content = document.getElementById("content")
                 let div = document.createElement('div');
@@ -22,7 +23,7 @@ function getInfo(shortname, id, type, link) {
                 let div = document.createElement('div');
                 div.setAttribute('id', 'response');
                 let line = document.createElement('h3');
-                line.innerHTML += " " + shortname + "    " + obj1[id].itemProperties.Weight + "kg " + obj1[id].itemProperties.ammoCaliber;
+                line.innerHTML += " " + shortname + "    " + obj1[id].itemProperties.Weight + "kg ";
                 content.appendChild(div);
                 div.appendChild(img);
                 div.appendChild(line);
@@ -36,7 +37,7 @@ function getInfo(shortname, id, type, link) {
 
 
 
-function getApiBasics(search) {
+function chargeFrontPage(search) {
     fetch('https://tarkov-tools.com/graphql', {
             method: 'POST',
             headers: {
@@ -49,51 +50,61 @@ function getApiBasics(search) {
         id
         name
         shortName
-        iconLink
-        
+        gridImageLink
     }
 }`
             })
         })
         .then(r => r.json())
         .then(function(data) {
+            var result = ""
             for (let index = 0; index < data.data.itemsByType.length; index++) {
                 let shortname = (data.data.itemsByType[index].shortName)
+                let name = (data.data.itemsByType[index].name)
                 let id = (data.data.itemsByType[index].id)
-                getInfo(shortname, data.data.itemsByType[index].id, search, data.data.itemsByType[index].iconLink)
+                let imageLink = (data.data.itemsByType[index].gridImageLink)
+
+                if (imageLink != null) {
+                    result += "<div><a href='detalle.php?name=" + name + "&id=" + id + "&img=" + imageLink + "'><div><img class='imagen' src='" + imageLink + "'></div><div><h3 class='nombre'>" + name + "</h3></div></a></div>";
+                } else {
+                    result += "<div><a href='detalle.php?name=" + shortname + "&id=" + id + "'><div><img class='imagen' src='" + "img/notFound.png" + "'></div><div><h3 class='nombre'>" + name + "</h3></div></a></div>";
+
+                }
+
+
             }
+            document.getElementById("content").innerHTML = result
         });
 }
 
 window.onload = function name() {
     document.getElementById("ammo").addEventListener("click", function(e) {
         eraseResults();
-        getApiBasics("ammo")
+        chargeFrontPage("ammo")
     })
     document.getElementById("helmet").addEventListener("click", function(e) {
         eraseResults();
-        getApiBasics("helmet")
+        chargeFrontPage("helmet")
     })
     document.getElementById("headset").addEventListener("click", function(e) {
         eraseResults();
-        getApiBasics("headphones")
+        chargeFrontPage("headphones")
     })
-    document.getElementById("gun").addEventListener("click", function(e) {
+    document.getElementById("armor").addEventListener("click", function(e) {
         eraseResults();
-        getApiBasics("gun")
-    })
-    document.getElementById("vest").addEventListener("click", function(e) {
-        eraseResults();
-        getApiBasics("armor")
+        chargeFrontPage("armor")
     })
     document.getElementById("keys").addEventListener("click", function(e) {
         eraseResults();
-        getApiBasics("keys")
+        chargeFrontPage("keys")
     })
 }
 
+
+
 function eraseResults() {
-    while (document.getElementById("content").firstChild) {
-        document.getElementById("content").removeChild(document.getElementById("content").firstChild)
+    var div = document.getElementById('content');
+    while (div.firstChild) {
+        div.removeChild(div.firstChild);
     }
 }
