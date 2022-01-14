@@ -1,5 +1,14 @@
 * {
     margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background-color: #80683c7a;
+    background-image: url("../img/background.jpg");
+    background-size: 100%;
+    background-blend-mode: color-burn;
 }
 
 @font-face {
@@ -36,7 +45,7 @@ header {
             li {
                 cursor: pointer;
                 display: inline;
-                color: white;
+                color: #9A8866;
                 h2 {
                     margin: 0 15px;
                     display: inline;
@@ -47,18 +56,52 @@ header {
 }
 
 #content {
+    width: 100%;
     display: flex;
+    align-items: center;
+    flex-direction: row;
     flex-wrap: wrap;
-    #response {
-        width: 50%;
-        display: flex;
-        .imagen {
-            width: 10%;
-            margin: 5%;
+    >div {
+        width: 97%;
+        margin: 1.5%;
+        a {
+            color: #6d4403;
+            text-decoration: none;
         }
-        h3 {
-            width: 80%;
-            margin-top: 8%;
+    }
+    div {
+        text-decoration: none;
+        text-align: center;
+        img {
+            max-width: 70%;
+        }
+    }
+}
+
+@media only screen and (min-width: 426px) {
+    #content {
+        >div {
+            width: 48%;
+            margin: 1%;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #content {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        >div {
+            width: 22%;
+            margin: 1.5%;
+        }
+        div {
+            text-decoration: none;
+            img {
+                max-width: 70%;
+            }
         }
     }
 }

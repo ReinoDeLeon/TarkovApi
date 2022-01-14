@@ -1,5 +1,14 @@
 * {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background-color: #80683c7a;
+  background-image: url("../img/background.jpg");
+  background-size: 100%;
+  background-blend-mode: color-burn;
 }
 
 @font-face {
@@ -46,7 +55,7 @@ header #menu ul {
 header #menu ul li {
   cursor: pointer;
   display: inline;
-  color: white;
+  color: #9A8866;
 }
 
 header #menu ul li h2 {
@@ -55,27 +64,71 @@ header #menu ul li h2 {
 }
 
 #content {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-#content #response {
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#content > div {
+  width: 97%;
+  margin: 1.5%;
 }
 
-#content #response .imagen {
-  width: 10%;
-  margin: 5%;
+#content > div a {
+  color: #6d4403;
+  text-decoration: none;
 }
 
-#content #response h3 {
-  width: 80%;
-  margin-top: 8%;
+#content div {
+  text-decoration: none;
+  text-align: center;
+}
+
+#content div img {
+  max-width: 70%;
+}
+
+@media only screen and (min-width: 426px) {
+  #content > div {
+    width: 48%;
+    margin: 1%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #content > div {
+    width: 22%;
+    margin: 1.5%;
+  }
+  #content div {
+    text-decoration: none;
+  }
+  #content div img {
+    max-width: 70%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
