@@ -34,7 +34,7 @@ header {
 }
 
 header #img {
-  margin: 2% 10%;
+  margin: 2% 6%;
   width: 20%;
 }
 
@@ -43,7 +43,7 @@ header #img img {
 }
 
 header #menu {
-  width: 60%;
+  width: auto;
   display: block;
 }
 
@@ -77,6 +77,15 @@ header #menu ul li h2 {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+#content > h3 {
+  text-align: justify;
+  width: 100%;
+  margin: 10% 30%;
+  padding-top: 50px;
+  font-size: xx-large;
+  color: #6d4403;
 }
 
 #content > div {
@@ -129,6 +138,25 @@ header #menu ul li h2 {
   }
   #content div img {
     max-width: 70%;
+  }
+  #info {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #info > div {
+    margin-left: 20%;
+    margin-bottom: 30px;
+  }
+  #info #name {
+    margin-top: 5%;
+    width: 20%;
+    font-size: xx-large;
+    font-style: normal;
+    margin-bottom: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
