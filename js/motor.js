@@ -61,11 +61,13 @@ function chargeFrontPage(search) {
             for (let index = 0; index < data.data.itemsByType.length; index++) {
                 let shortname = (data.data.itemsByType[index].shortName)
                 let name = (data.data.itemsByType[index].name)
+                name = name.replace('\'', '')
                 let id = (data.data.itemsByType[index].id)
                 let imageLink = (data.data.itemsByType[index].gridImageLink)
+                console.log(shortname + " " + name + " " + id + " " + imageLink)
 
                 if (imageLink != null) {
-                    result += "<div><a href='detalle.php?name=" + name + "&id=" + id + "&img=" + imageLink + "'><div><img class='imagen' src='" + imageLink + "'></div><div><h3 class='nombre'>" + name + "</h3></div></a></div>";
+                    result += "<div><a href='detalle.php?name=" + name + "&id=" + id + "&img=" + imageLink + "&type=" + search + "'><div><img class='imagen' src='" + imageLink + "'></div><div><h3 class='nombre'>" + name + "</h3></div></a></div>";
                 } else {
                     result += "<div><a href='detalle.php?name=" + shortname + "&id=" + id + "'><div><img class='imagen' src='" + "img/notFound.png" + "'></div><div><h3 class='nombre'>" + name + "</h3></div></a></div>";
 
