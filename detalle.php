@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de prenda</title>
+    <title><?php echo $_GET['name'] ?></title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/motor.js"></script>
 </head>
@@ -27,10 +27,44 @@
             $name = $_GET['name'];
             $id = $_GET['id'];
             $img = $_GET['img'];
-            echo "<section id='info'>";
-            echo "<div><img src='" . $img . "'></div>";
-            echo "<div id='name'>" . $name . "</div>";
-            echo "</section>";   
+            
+            if ($_GET['type'] == "helmet"){
+                echo "<section id='info'>";
+                echo "<div><img src='" . $img . "'></div>";
+                echo "<div id='name'>" . $name . "</div>";
+                echo "<div id='weigth'>" . $json_data[$id]["itemProperties"]["Weight"] . "</div>";
+                echo "<div id='material'>" . $json_data[$id]["itemProperties"]["ArmorMaterial"] . "</div>";
+                echo "<div id='material'>" . $json_data[$id]["itemProperties"]["armorClass"] . "</div>";
+                for ($i=0; $i < count($json_data[$id]["itemProperties"]["armorZone"]); $i++) { 
+                    echo "<div id='material'>" . $json_data[$id]["itemProperties"]["armorZone"][$i] . "</div>";
+                }
+                if ($json_data[$id]["itemProperties"]["headSegments"]) {
+                    for ($i=0; $i < count($json_data[$id]["itemProperties"]["headSegments"]); $i++) { 
+                        echo "<div id='material'>" . $json_data[$id]["itemProperties"]["headSegments"][$i] . "</div>";
+                    }
+                }
+                echo "</section>";   
+            }
+            else if ($_GET['type'] == "armor"){
+                echo "<section id='info'>";
+                echo "<div><img src='" . $img . "'></div>";
+                echo "<div id='name'>" . $name . "</div>";
+                echo "<div id='weigth'>" . $json_data[$id]["itemProperties"]["Weight"] . "</div>";
+                echo "<div id='material'>" . $json_data[$id]["itemProperties"]["ArmorMaterial"] . "</div>";
+                echo "<div id='class'>" . $json_data[$id]["itemProperties"]["armorClass"] . "</div>";
+                for ($i=0; $i < count($json_data[$id]["itemProperties"]["armorZone"]); $i++) { 
+                    echo "<div class='zone'>" . $json_data[$id]["itemProperties"]["armorZone"][$i] . "</div>";
+                }
+                echo "</section>";   
+            }
+            else {
+                echo "<section id='info'>";
+                echo "<div><img src='" . $img . "'></div>";
+                echo "<div id='name'>" . $name . "</div>";
+                echo "<div id='weigth'>" . $json_data[$id]["itemProperties"]["Weight"] . "</div>";
+                echo "</section>";   
+            }
+
         ?>
     </div>
 </div>
