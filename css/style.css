@@ -10,6 +10,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
+  background-blend-mode: darken;
 }
 
 @font-face {
@@ -35,7 +36,7 @@ header {
 }
 
 header #img {
-  margin-left: 2%;
+  margin-left: 5%;
   width: 15%;
 }
 
@@ -44,51 +45,36 @@ header #img img {
 }
 
 header #menu {
-  width: auto;
+  width: 80%;
   display: block;
+  text-align: center;
 }
 
 header #menu ul {
-  margin: 5% 5%;
+  margin: 5% 0;
   width: 100%;
 }
 
 header #menu ul li {
-  padding: 0 10px;
+  padding: 0 20px;
   cursor: pointer;
   display: inline;
   color: #ffffff;
 }
 
 header #menu ul li h2 {
-  margin: 0 15px;
   display: inline;
-  font-size: xx-large;
+  font-size: x-large;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
 }
 
+.header {
+  background-color: #1a140b42;
+}
+
 header:hover {
   background-color: #92918f4b;
-}
-
-#detalle1 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #584e3a;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#detalle1 header #img {
-  width: 100%;
-  text-align: center;
-}
-
-#detalle1 header #img img {
-  width: 20%;
 }
 
 #myVideo {
@@ -139,7 +125,8 @@ header:hover {
 }
 
 #content > div a {
-  color: #6d4403;
+  color: #000;
+  font-family: 'Tarkov Black';
   text-decoration: none;
 }
 
@@ -184,7 +171,7 @@ header:hover {
   #content div img {
     max-width: 70%;
   }
-  #info {
+  #detalle1 #info {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -192,16 +179,58 @@ header:hover {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  #info > div {
-    margin-left: 20%;
-    margin-bottom: 30px;
-  }
-  #info #name {
-    margin-top: 3%;
-    width: 20%;
+  #detalle1 #info > div {
+    font-family: 'Tarkov Black';
     font-size: xx-large;
     font-style: normal;
+    margin: 2% 10%;
+    width: 30%;
     margin-bottom: 30px;
+    text-align: center;
+  }
+  #detalle1 #info #img {
+    margin: 0;
+    width: 33%;
+  }
+  #detalle1 #info #name {
+    text-align: center;
+    margin: 3% 0;
+    width: 100%;
+    font-family: 'Tarkov Black';
+    font-size: xx-large;
+    font-style: normal;
+  }
+  #detalle1 #info #weigth {
+    margin: 0;
+    width: 33%;
+    text-align: center;
+    margin-top: 2%;
+  }
+  #detalle1 #info #material {
+    margin: 0;
+    width: 33%;
+    margin-top: 2%;
+  }
+  #detalle1 header {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #a99d86bb;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #detalle1 header #img {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  #detalle1 header #img img {
+    width: 15%;
+  }
+  #detalle1 header div:hover {
+    background-color: #5c5b5b46;
   }
 }
 /*# sourceMappingURL=style.css.map */
