@@ -27,12 +27,12 @@
             $name = $_GET['name'];
             $id = $_GET['id'];
             $img = $_GET['img'];
-            
-            if ($_GET['type'] == "helmet"){
-                echo "<section id='info'>";
+            echo "<section id='info'>";
                 echo "<div><img src='" . $img . "'></div>";
                 echo "<div id='name'>" . $name . "</div>";
-                echo "<div id='weigth'>" . $json_data[$id]["itemProperties"]["Weight"] . "</div>";
+                echo "<div id='weigth'>Peso: " . $json_data[$id]["itemProperties"]["Weight"] . "kg</div>";
+            if ($_GET['type'] == "helmet"){
+                
                 echo "<div id='material'>" . $json_data[$id]["itemProperties"]["ArmorMaterial"] . "</div>";
                 echo "<div id='material'>" . $json_data[$id]["itemProperties"]["armorClass"] . "</div>";
                 for ($i=0; $i < count($json_data[$id]["itemProperties"]["armorZone"]); $i++) { 
@@ -43,27 +43,18 @@
                         echo "<div id='material'>" . $json_data[$id]["itemProperties"]["headSegments"][$i] . "</div>";
                     }
                 }
-                echo "</section>";   
+                  
             }
             else if ($_GET['type'] == "armor"){
-                echo "<section id='info'>";
-                echo "<div><img src='" . $img . "'></div>";
-                echo "<div id='name'>" . $name . "</div>";
-                echo "<div id='weigth'>" . $json_data[$id]["itemProperties"]["Weight"] . "</div>";
+                
                 echo "<div id='material'>" . $json_data[$id]["itemProperties"]["ArmorMaterial"] . "</div>";
                 echo "<div id='class'>" . $json_data[$id]["itemProperties"]["armorClass"] . "</div>";
                 for ($i=0; $i < count($json_data[$id]["itemProperties"]["armorZone"]); $i++) { 
                     echo "<div class='zone'>" . $json_data[$id]["itemProperties"]["armorZone"][$i] . "</div>";
                 }
-                echo "</section>";   
             }
-            else {
-                echo "<section id='info'>";
-                echo "<div><img src='" . $img . "'></div>";
-                echo "<div id='name'>" . $name . "</div>";
-                echo "<div id='weigth'>" . $json_data[$id]["itemProperties"]["Weight"] . "</div>";
-                echo "</section>";   
-            }
+            
+            echo "</section>"; 
 
         ?>
     </div>
