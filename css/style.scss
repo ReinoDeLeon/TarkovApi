@@ -7,8 +7,9 @@ body {
     width: 100%;
     background-color: #80683c7a;
     background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: 100%;
-    background-blend-mode: color-burn;
 }
 
 @font-face {
@@ -28,10 +29,10 @@ h2 {
 
 header {
     display: flex;
-    background-color: #311e00;
+    background-color: #92918f10;
     #img {
-        margin: 2% 6%;
-        width: 20%;
+        margin-left: 2%;
+        width: 15%;
         img {
             width: 100%;
         }
@@ -40,19 +41,59 @@ header {
         width: auto;
         display: block;
         ul {
-            margin: 5% 0;
+            margin: 5% 5%;
             width: 100%;
             li {
+                padding: 0 10px;
                 cursor: pointer;
                 display: inline;
-                color: #9A8866;
+                color: #ffffff;
                 h2 {
                     margin: 0 15px;
                     display: inline;
+                    font-size: xx-large;
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: #000;
                 }
             }
         }
     }
+}
+
+header:hover {
+    background-color: #92918f4b;
+}
+
+#detalle1 {
+    header {
+        display: flex;
+        background-color: #584e3a;
+        align-items: center;
+        #img {
+            width: 100%;
+            text-align: center;
+            img {
+                width: 20%;
+            }
+        }
+    }
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }
 
 #content {
@@ -121,7 +162,7 @@ header {
             margin-bottom: 30px;
         }
         #name {
-            margin-top: 5%;
+            margin-top: 3%;
             width: 20%;
             font-size: xx-large;
             font-style: normal;
