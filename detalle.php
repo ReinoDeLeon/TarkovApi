@@ -30,11 +30,12 @@
             echo "<section id='info'>";
                 
                 echo "<div id='name'>" . $name . "</div>";
-                echo "<div id='img'><img src='" . $img . "'></div>";echo "<div id='weigth'>Weight: " . $json_data[$id]["itemProperties"]["Weight"] . "kg</div>";
+                echo "<div id='img'><img src='" . $img . "'></div>";
+                echo "<div id='weigth'>Weight: " . $json_data[$id]["itemProperties"]["Weight"] . "kg</div>";
             if ($_GET['type'] == "helmet"){
                 
                 echo "<div id='material'>Material: " . $json_data[$id]["itemProperties"]["ArmorMaterial"] . "</div>";
-                echo "<div id='material'>Armor class: " . $json_data[$id]["itemProperties"]["armorClass"] . "</div>";
+                echo "<div id='class'>Armor class: " . $json_data[$id]["itemProperties"]["armorClass"] . "</div>";
                 for ($i=0; $i < count($json_data[$id]["itemProperties"]["armorZone"]); $i++) { 
                     echo "<div id='material'>Protects: " . $json_data[$id]["itemProperties"]["armorZone"][$i] . "</div>";
                 }
