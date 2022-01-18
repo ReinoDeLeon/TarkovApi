@@ -37,7 +37,7 @@ function chargeSimpleInfo(shortname, id, type, link) {
 
 
 
-function chargeFrontPage(search) {
+function loadFrontPage(search) {
     fetch('https://tarkov-tools.com/graphql', {
             method: 'POST',
             headers: {
@@ -81,24 +81,33 @@ function chargeFrontPage(search) {
 
 window.onload = function name() {
     document.getElementById("ammo").addEventListener("click", function(e) {
+        document.getElementById("myVideo").setAttribute("class", "hide")
         eraseResults();
-        chargeFrontPage("ammo")
+        loadFrontPage("ammo")
     })
     document.getElementById("helmet").addEventListener("click", function(e) {
+
+        document.getElementById("myVideo").setAttribute("class", "hide")
         eraseResults();
-        chargeFrontPage("helmet")
+        loadFrontPage("helmet")
     })
     document.getElementById("headset").addEventListener("click", function(e) {
+
+        document.getElementById("myVideo").setAttribute("class", "hide")
         eraseResults();
-        chargeFrontPage("headphones")
+        loadFrontPage("headphones")
     })
     document.getElementById("armor").addEventListener("click", function(e) {
+
+        document.getElementById("myVideo").setAttribute("class", "hide")
         eraseResults();
-        chargeFrontPage("armor")
+        loadFrontPage("armor")
     })
     document.getElementById("keys").addEventListener("click", function(e) {
+
+        document.getElementById("myVideo").setAttribute("class", "hide")
         eraseResults();
-        chargeFrontPage("keys")
+        loadFrontPage("keys")
     })
 }
 
