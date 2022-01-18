@@ -82,30 +82,35 @@ function loadFrontPage(search) {
 window.onload = function name() {
     document.getElementById("ammo").addEventListener("click", function(e) {
         document.getElementById("myVideo").setAttribute("class", "hide")
+        document.getElementById("header").setAttribute("class", "header")
         eraseResults();
         loadFrontPage("ammo")
     })
     document.getElementById("helmet").addEventListener("click", function(e) {
 
         document.getElementById("myVideo").setAttribute("class", "hide")
+        document.getElementById("header").setAttribute("class", "header")
         eraseResults();
         loadFrontPage("helmet")
     })
     document.getElementById("headset").addEventListener("click", function(e) {
 
         document.getElementById("myVideo").setAttribute("class", "hide")
+        document.getElementById("header").setAttribute("class", "header")
         eraseResults();
         loadFrontPage("headphones")
     })
     document.getElementById("armor").addEventListener("click", function(e) {
 
         document.getElementById("myVideo").setAttribute("class", "hide")
+        document.getElementById("header").setAttribute("class", "header")
         eraseResults();
         loadFrontPage("armor")
     })
     document.getElementById("keys").addEventListener("click", function(e) {
 
         document.getElementById("myVideo").setAttribute("class", "hide")
+        document.getElementById("header").setAttribute("class", "header")
         eraseResults();
         loadFrontPage("keys")
     })
