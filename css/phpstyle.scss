@@ -1,0 +1,145 @@
+#detalle1 {
+    img {
+        width: 60%;
+    }
+    margin: 0%;
+    padding: 0%;
+    background-color: #80683c7a;
+    color: black;
+    font-family: 'Tarkov';
+    font-size: x-large;
+    header {
+        margin: 0;
+        text-align: center;
+        background-color: #5240207a;
+        img {
+            width: 30%;
+        }
+    }
+    #info {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        >div {
+            font-family: 'Tarkov Black';
+            font-size: xx-large;
+            font-style: normal;
+            margin: 5%;
+            width: 40%;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #img {
+            margin: 0;
+            width: 100%;
+        }
+        #name {
+            text-align: center;
+            margin: 3% 0;
+            padding: 0 10px;
+            width: 100%;
+            font-family: 'Tarkov Black';
+            font-size: xx-large;
+            font-style: normal;
+        }
+        #weigth {
+            width: 40%;
+            text-align: center;
+        }
+    }
+}
+
+img {
+    width: 30%;
+}
+
+@media only screen and (min-width: 426px) {
+    #detalle1 {
+        #info {
+            img {
+                width: 40%;
+            }
+            >div {
+                font-family: 'Tarkov Black';
+                font-size: xx-large;
+                font-style: normal;
+                margin: 2% 10%;
+                width: 30%;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            #img {
+                margin: 0;
+                width: 50%;
+            }
+            #name {
+                text-align: center;
+                margin: 3% 0;
+                width: 100%;
+                font-family: 'Tarkov Black';
+                font-size: xx-large;
+                font-style: normal;
+            }
+            #weigth {
+                margin: 0;
+                width: 50%;
+                text-align: center;
+                margin-top: 2%;
+            }
+            #material {
+                margin: 0;
+                width: 50%;
+                margin-top: 2%;
+            }
+            .zone {
+                margin: 0;
+                width: 50%;
+                margin-top: 2%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #detalle1 {
+        #info {
+            >div {
+                font-family: 'Tarkov Black';
+                font-size: xx-large;
+                font-style: normal;
+                margin: 2% 10%;
+                width: 30%;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            #img {
+                margin: 0;
+                width: 33%;
+            }
+            #name {
+                text-align: center;
+                margin: 3% 0;
+                width: 100%;
+                font-family: 'Tarkov Black';
+                font-size: xx-large;
+                font-style: normal;
+            }
+            #weigth {
+                margin: 0;
+                width: 33%;
+                text-align: center;
+                margin-top: 2%;
+            }
+            #material {
+                margin: 0;
+                width: 33%;
+                margin-top: 2%;
+            }
+            .zone {
+                margin: 0;
+                width: 33%;
+                margin-top: 2%;
+            }
+        }
+    }
+}

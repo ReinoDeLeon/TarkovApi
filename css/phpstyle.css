@@ -1,0 +1,149 @@
+#detalle1 {
+  margin: 0%;
+  padding: 0%;
+  background-color: #80683c7a;
+  color: black;
+  font-family: 'Tarkov';
+  font-size: x-large;
+}
+
+#detalle1 img {
+  width: 60%;
+}
+
+#detalle1 header {
+  margin: 0;
+  text-align: center;
+  background-color: #5240207a;
+}
+
+#detalle1 header img {
+  width: 30%;
+}
+
+#detalle1 #info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#detalle1 #info > div {
+  font-family: 'Tarkov Black';
+  font-size: xx-large;
+  font-style: normal;
+  margin: 5%;
+  width: 40%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#detalle1 #info #img {
+  margin: 0;
+  width: 100%;
+}
+
+#detalle1 #info #name {
+  text-align: center;
+  margin: 3% 0;
+  padding: 0 10px;
+  width: 100%;
+  font-family: 'Tarkov Black';
+  font-size: xx-large;
+  font-style: normal;
+}
+
+#detalle1 #info #weigth {
+  width: 40%;
+  text-align: center;
+}
+
+img {
+  width: 30%;
+}
+
+@media only screen and (min-width: 426px) {
+  #detalle1 #info img {
+    width: 40%;
+  }
+  #detalle1 #info > div {
+    font-family: 'Tarkov Black';
+    font-size: xx-large;
+    font-style: normal;
+    margin: 2% 10%;
+    width: 30%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  #detalle1 #info #img {
+    margin: 0;
+    width: 50%;
+  }
+  #detalle1 #info #name {
+    text-align: center;
+    margin: 3% 0;
+    width: 100%;
+    font-family: 'Tarkov Black';
+    font-size: xx-large;
+    font-style: normal;
+  }
+  #detalle1 #info #weigth {
+    margin: 0;
+    width: 50%;
+    text-align: center;
+    margin-top: 2%;
+  }
+  #detalle1 #info #material {
+    margin: 0;
+    width: 50%;
+    margin-top: 2%;
+  }
+  #detalle1 #info .zone {
+    margin: 0;
+    width: 50%;
+    margin-top: 2%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #detalle1 #info > div {
+    font-family: 'Tarkov Black';
+    font-size: xx-large;
+    font-style: normal;
+    margin: 2% 10%;
+    width: 30%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  #detalle1 #info #img {
+    margin: 0;
+    width: 33%;
+  }
+  #detalle1 #info #name {
+    text-align: center;
+    margin: 3% 0;
+    width: 100%;
+    font-family: 'Tarkov Black';
+    font-size: xx-large;
+    font-style: normal;
+  }
+  #detalle1 #info #weigth {
+    margin: 0;
+    width: 33%;
+    text-align: center;
+    margin-top: 2%;
+  }
+  #detalle1 #info #material {
+    margin: 0;
+    width: 33%;
+    margin-top: 2%;
+  }
+  #detalle1 #info .zone {
+    margin: 0;
+    width: 33%;
+    margin-top: 2%;
+  }
+}
+/*# sourceMappingURL=phpstyle.css.map */
