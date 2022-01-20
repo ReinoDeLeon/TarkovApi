@@ -6,11 +6,67 @@
 body {
   width: 100%;
   background-color: #80683c7a;
-  background-image: url("../img/background.jpg");
+  background-image: url("https://i.redd.it/hezod11b5s361.png");
+  background-blend-mode: darken;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
-  background-blend-mode: darken;
+  background-position: center;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #92918f10;
+}
+
+header #img {
+  width: 100%;
+  text-align: center;
+}
+
+header #img img {
+  width: 40%;
+}
+
+header #menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+header #menu ul {
+  margin: 5% 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header #menu ul li {
+  width: 100%;
+  padding: 0 20px;
+  cursor: pointer;
+  display: inline;
+  color: #ffffff;
+}
+
+header #menu ul li h2 {
+  display: inline;
+  font-size: x-large;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
 }
 
 @font-face {
@@ -26,47 +82,6 @@ body {
 h2 {
   font-size: x-large;
   font-family: 'Tarkov Black';
-}
-
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #92918f10;
-}
-
-header #img {
-  margin-left: 5%;
-  width: 15%;
-}
-
-header #img img {
-  width: 100%;
-}
-
-header #menu {
-  width: 80%;
-  display: block;
-  text-align: center;
-}
-
-header #menu ul {
-  margin: 5% 0;
-  width: 100%;
-}
-
-header #menu ul li {
-  padding: 0 20px;
-  cursor: pointer;
-  display: inline;
-  color: #ffffff;
-}
-
-header #menu ul li h2 {
-  display: inline;
-  font-size: x-large;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #000;
 }
 
 .header {
@@ -125,7 +140,9 @@ header:hover {
 }
 
 #content > div a {
-  color: #000;
+  color: #fff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
   font-family: 'Tarkov Black';
   text-decoration: none;
 }
@@ -136,13 +153,67 @@ header:hover {
 }
 
 #content div img {
-  max-width: 70%;
+  max-width: 50%;
 }
 
 @media only screen and (min-width: 426px) {
+  #content img {
+    max-width: 50%;
+  }
   #content > div {
     width: 48%;
     margin: 1%;
+  }
+  header #menu ul {
+    margin: 0 0 5% 0;
+  }
+  #detalle1 #info {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #detalle1 #info > div {
+    font-family: 'Tarkov Black';
+    font-size: xx-large;
+    font-style: normal;
+    margin: 2% 10%;
+    width: 30%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  #detalle1 #info #img {
+    margin: 0;
+    width: 33%;
+  }
+  #detalle1 #info #img img {
+    width: 30%;
+  }
+  #detalle1 #info #name {
+    text-align: center;
+    margin: 3% 0;
+    width: 100%;
+    font-family: 'Tarkov Black';
+    font-size: xx-large;
+    font-style: normal;
+  }
+  #detalle1 #info #weigth {
+    margin: 0;
+    width: 33%;
+    text-align: center;
+    margin-top: 2%;
+  }
+  #detalle1 #info #material {
+    margin: 0;
+    width: 33%;
+    margin-top: 2%;
+  }
+  #detalle1 #info .zone {
+    margin: 0;
+    width: 33%;
+    margin-top: 2%;
   }
 }
 
@@ -216,26 +287,21 @@ header:hover {
     width: 33%;
     margin-top: 2%;
   }
-  #detalle1 header {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: #a99d86bb;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #detalle1 header #img {
-    margin: 0;
-    width: 100%;
-    text-align: center;
-  }
-  #detalle1 header #img img {
+  header #img {
+    margin-left: 5%;
     width: 15%;
   }
-  #detalle1 header div:hover {
-    background-color: #5c5b5b46;
+  header #img img {
+    width: 100%;
+  }
+  header #menu {
+    width: 80%;
+    display: block;
+  }
+  header #menu ul {
+    display: block;
+    margin: 5% 0;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,11 +6,53 @@
 body {
     width: 100%;
     background-color: #80683c7a;
-    background-image: url("../img/background.jpg");
+    background-image: url('https://i.redd.it/hezod11b5s361.png');
+    background-blend-mode: darken;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
-    background-blend-mode: darken;
+    background-position: center;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #92918f10;
+    #img {
+        width: 100%;
+        text-align: center;
+        img {
+            width: 40%;
+        }
+    }
+    #menu {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        ul {
+            margin: 5% 0;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 100%;
+                padding: 0 20px;
+                cursor: pointer;
+                display: inline;
+                color: #ffffff;
+                h2 {
+                    display: inline;
+                    font-size: x-large;
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: #000;
+                }
+            }
+        }
+    }
 }
 
 @font-face {
@@ -26,39 +68,6 @@ body {
 h2 {
     font-size: x-large;
     font-family: 'Tarkov Black';
-}
-
-header {
-    display: flex;
-    background-color: #92918f10;
-    #img {
-        margin-left: 5%;
-        width: 15%;
-        img {
-            width: 100%;
-        }
-    }
-    #menu {
-        width: 80%;
-        display: block;
-        text-align: center;
-        ul {
-            margin: 5% 0;
-            width: 100%;
-            li {
-                padding: 0 20px;
-                cursor: pointer;
-                display: inline;
-                color: #ffffff;
-                h2 {
-                    display: inline;
-                    font-size: x-large;
-                    -webkit-text-stroke-width: 1px;
-                    -webkit-text-stroke-color: #000;
-                }
-            }
-        }
-    }
 }
 
 .header {
@@ -104,7 +113,9 @@ header:hover {
         width: 97%;
         margin: 1.5%;
         a {
-            color: #000;
+            color: #fff;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #000;
             font-family: 'Tarkov Black';
             text-decoration: none;
         }
@@ -113,16 +124,73 @@ header:hover {
         text-decoration: none;
         text-align: center;
         img {
-            max-width: 70%;
+            max-width: 50%;
         }
     }
 }
 
 @media only screen and (min-width: 426px) {
     #content {
+        img {
+            max-width: 50%;
+        }
         >div {
             width: 48%;
             margin: 1%;
+        }
+    }
+    header {
+        #menu {
+            ul {
+                margin: 0 0 5% 0;
+            }
+        }
+    }
+    #detalle1 {
+        #info {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            >div {
+                font-family: 'Tarkov Black';
+                font-size: xx-large;
+                font-style: normal;
+                margin: 2% 10%;
+                width: 30%;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            #img {
+                margin: 0;
+                width: 33%;
+                img {
+                    width: 30%;
+                }
+            }
+            #name {
+                text-align: center;
+                margin: 3% 0;
+                width: 100%;
+                font-family: 'Tarkov Black';
+                font-size: xx-large;
+                font-style: normal;
+            }
+            #weigth {
+                margin: 0;
+                width: 33%;
+                text-align: center;
+                margin-top: 2%;
+            }
+            #material {
+                margin: 0;
+                width: 33%;
+                margin-top: 2%;
+            }
+            .zone {
+                margin: 0;
+                width: 33%;
+                margin-top: 2%;
+            }
         }
     }
 }
@@ -187,21 +255,22 @@ header:hover {
                 margin-top: 2%;
             }
         }
-        header {
-            width: 100%;
-            display: flex;
-            background-color: #a99d86bb;
-            align-items: center;
-            #img {
-                margin: 0;
+    }
+    header {
+        #img {
+            margin-left: 5%;
+            width: 15%;
+            img {
                 width: 100%;
-                text-align: center;
-                img {
-                    width: 15%;
-                }
             }
-            div:hover {
-                background-color: #5c5b5b46;
+        }
+        #menu {
+            width: 80%;
+            display: block;
+            ul {
+                display: block;
+                margin: 5% 0;
+                width: 100%;
             }
         }
     }
