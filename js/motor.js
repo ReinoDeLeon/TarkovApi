@@ -78,8 +78,25 @@ function loadFrontPage(search) {
             document.getElementById("content").innerHTML = result
         });
 }
+window.addEventListener("resize", function() {
+    if (window.outerWidth < 426) {
+        document.getElementById("myVideo").setAttribute("src", "vid/fondo.mp4")
+        document.body.style.backgroundSize = "400%"
+    } else {
+        document.getElementById("myVideo").setAttribute("src", "vid/cinematic.mp4")
+        document.body.style.backgroundSize = "150%"
+    }
+})
 
 window.onload = function name() {
+    if (window.outerWidth < 426) {
+        document.getElementById("myVideo").setAttribute("src", "vid/fondo.mp4")
+
+        document.body.style.backgroundSize = "400%"
+    } else {
+        document.getElementById("myVideo").setAttribute("src", "vid/cinematic.mp4")
+        document.body.style.backgroundSize = "150%"
+    }
     document.getElementById("ammo").addEventListener("click", function(e) {
         document.getElementById("myVideo").setAttribute("class", "hide")
         document.getElementById("header").setAttribute("class", "header")
